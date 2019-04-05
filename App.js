@@ -1,18 +1,11 @@
-import HomeScreen from './src/HomeScreen/HomeScreen';
-import BarcodeScanner from './src/BarcodeScanner/BarcodeScanner';
-import {
-  createBottomTabNavigator,
-  createAppContainer
-} from 'react-navigation';
+import React, { Component } from "react";
+import { View } from "react-native";
+import MainNavigator from "./src/Navigation/TabNavigation";
 
-const MainNavigator = createBottomTabNavigator({
-  Home: HomeScreen,
-  BarcodeScanner: BarcodeScanner
-}, {
-  tabBarOptions: {
-    activeTintColor: 'tomato',
-    inactiveTintColor: 'grey'
+class App extends Component {
+  render() {
+    return <MainNavigator />;
   }
-});
+}
 
-export default createAppContainer(MainNavigator);
+export default App;

@@ -6,7 +6,6 @@ import HomeScreenHoc from "./HomeScreenHoc";
 const HomeScreen = props => {
   return (
     <View style={styles.container}>
-      {console.log(props)}
       <Text>This is Text</Text>
       <TouchableOpacity onPress={() => props.logWeight(12)}>
         <Text>Press Me</Text>

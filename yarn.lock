@@ -799,6 +799,11 @@
     "@types/istanbul-lib-coverage" "^1.1.0"
     "@types/yargs" "^12.0.9"
 
+"@react-native-community/async-storage@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@react-native-community/async-storage/-/async-storage-1.2.3.tgz#0751d328d0e86f30f3bbaba14525e21ed6904574"
+  integrity sha512-Yho8VKIAk6Z2jXzoEW2fPsBB0S2/4aQSfekOHbPhEsIKH7Ym1e6zrLGlKTsfqjl4ORLFXdyx9QxVK4qELog06Q==
+
 "@react-native-community/cli@^1.2.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@react-native-community/cli/-/cli-1.5.1.tgz#21a93266ecf1885990ac86680a369aa3ff432973"

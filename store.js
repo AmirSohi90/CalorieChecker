@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware, compose } from "redux";
+import { persistStore } from "redux-persist";
 import rootReducer from "./src/reducers/index";
 import createSagaMiddleware from "redux-saga";
 import rootSaga from "./src/hoc/sagas/rootSaga";
@@ -9,12 +10,12 @@ const initialState = {};
 
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(
+export const store = createStore(
   rootReducer,
   initialState,
   composeEnhancer(applyMiddleware(sagaMiddleware))
 );
 
-sagaMiddleware.run(rootSaga);
+export const persistor = persistStore(store);
 
-export default store;
+sagaMiddleware.run(rootSaga);

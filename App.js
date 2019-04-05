@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import MainNavigator from "./src/Navigation/TabNavigation";
 import { Provider } from "react-redux";
-import store from "./store";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./store";
 
 class App extends Component {
   render() {
@@ -9,7 +10,9 @@ class App extends Component {
       // Provider takes the store which holds the state
       // store stores the whole state tree of your application
       <Provider store={store}>
-        <MainNavigator />
+        <PersistGate loading={null} persistor={persistor}>
+          <MainNavigator />
+        </PersistGate>
       </Provider>
     );
   }

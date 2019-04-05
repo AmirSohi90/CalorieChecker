@@ -1,10 +1,17 @@
 import React, { Component } from "react";
-import { View } from "react-native";
 import MainNavigator from "./src/Navigation/TabNavigation";
+import { Provider } from "react-redux";
+import store from "./store";
 
 class App extends Component {
   render() {
-    return <MainNavigator />;
+    return (
+      // Provider takes the store which holds the state
+      // store stores the whole state tree of your application
+      <Provider store={store}>
+        <MainNavigator />
+      </Provider>
+    );
   }
 }
 

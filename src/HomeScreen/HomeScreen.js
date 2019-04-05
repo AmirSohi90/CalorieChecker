@@ -1,11 +1,17 @@
-import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import React from "react";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { compose } from "redux";
+import HomeScreenHoc from "./HomeScreenHoc";
 
-const HomeScreen = (props) => {
+const HomeScreen = props => {
   return (
     <View style={styles.container}>
+      {console.log(props)}
       <Text>This is Text</Text>
-      <TouchableOpacity onPress={() => props.navigation.navigate('BarcodeScanner')}><Text>Press Me</Text></TouchableOpacity>
+      <TouchableOpacity onPress={() => props.logWeight(12)}>
+        <Text>Press Me</Text>
+      </TouchableOpacity>
+      <Text>{props.userWeight}</Text>
     </View>
   );
 };
@@ -13,11 +19,10 @@ const HomeScreen = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   }
 });
 
-
-export default HomeScreen;
+export default compose(HomeScreenHoc)(HomeScreen);

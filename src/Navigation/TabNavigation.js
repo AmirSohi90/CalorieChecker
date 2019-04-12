@@ -1,11 +1,13 @@
-import HomeScreen from "../HomeScreen/HomeScreen";
-import BarcodeScanner from "../BarcodeScanner/BarcodeScanner";
+import HomeScreen from "../components/pages/HomeScreen/HomeScreen";
+import BarcodeScanner from "../components/pages/BarcodeScanner/BarcodeScanner";
+import UserDetails from "../components/pages/UserDetails/UserDetails";
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 
 const MainNavigator = createBottomTabNavigator(
   {
     Home: HomeScreen,
-    BarcodeScanner: BarcodeScanner
+    "User Details": UserDetails,
+    "Barcode Scanner": BarcodeScanner
   },
   {
     tabBarOptions: {

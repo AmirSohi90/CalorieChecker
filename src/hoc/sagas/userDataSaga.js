@@ -5,7 +5,7 @@ import { LOG_WEIGHT } from "../containers/UserData/constants";
 import { logGender } from "../containers/UserData/actions";
 
 function* logWeightSaga() {
-  yield put(logGender(55));
+  console.log("congratulations for logging weight");
 }
 
 export default function* watchUserData() {

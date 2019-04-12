@@ -1,5 +1,5 @@
-import { logWeight } from "../hoc/containers/UserData/actions";
-import { makeSelectUserWeight } from "../hoc/containers/UserData/selectors";
+import { logWeight } from "../../../hoc/containers/UserData/actions";
+import { makeSelectUserWeight } from "../../../hoc/containers/UserData/selectors";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 

@@ -16,4 +16,28 @@ const makeSelectUserAge = () =>
     userData => userData.userAge
   );
 
-export { makeSelectUserWeight, makeSelectUserAge };
+const makeSelectUserGender = () =>
+  createSelector(
+    selectUserDataDomain,
+    userData => userData.userGender
+  );
+
+const makeSelectUserBodyFat = () =>
+  createSelector(
+    selectUserDataDomain,
+    userData => userData.userBodyFat
+  );
+
+const makeSelectUserActivityLevel = () =>
+  createSelector(
+    selectUserDataDomain,
+    userData => userData.userActivityLevel
+  );
+
+export {
+  makeSelectUserWeight,
+  makeSelectUserAge,
+  makeSelectUserGender,
+  makeSelectUserBodyFat,
+  makeSelectUserActivityLevel
+};
